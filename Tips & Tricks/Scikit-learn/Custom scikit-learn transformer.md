@@ -20,6 +20,9 @@ class MyTransformer(BaseEstimator, TransformerMixin):
 		# apply transform to X
 		X_transformed = X * self.my_var   # example
 		return X_transformed
+	def fit_transform(self, X, y=None):
+		# Only include this method if absolutely necessary
+		return X
 
 transformer = MyTransformer(my_var=100)
 ```
